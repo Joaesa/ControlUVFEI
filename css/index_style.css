@@ -5,14 +5,31 @@
 	font-weight: lighter;
 }
 nav#top{
-	background-color: #2d2d2d;
 	height: 50px;
+	color:#fff;
+	background: #03c03c; /* Old browsers */
+background: -moz-linear-gradient(left,  #03c03c 0%, #1e8acc 40%, #1e8acc 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#03c03c), color-stop(40%,#1e8acc), color-stop(100%,#1e8acc)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #03c03c 0%,#1e8acc 40%,#1e8acc 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #03c03c 0%,#1e8acc 40%,#1e8acc 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #03c03c 0%,#1e8acc 40%,#1e8acc 100%); /* IE10+ */
+background: linear-gradient(to right,  #03c03c 0%,#1e8acc 40%,#1e8acc 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03c03c', endColorstr='#1e8acc',GradientType=1 ); /* IE6-9 */
+
 }
 nav#izq{
 	position: fixed;
 	width: 200px;
 	height: 100%;
-	background-color: #2d2d2d;
+	background: #03c03c; /* Old browsers */
+background: -moz-linear-gradient(left,  #03c03c 0%, #1e8acc 40%, #1e8acc 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#03c03c), color-stop(40%,#1e8acc), color-stop(100%,#1e8acc)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #03c03c 0%,#1e8acc 40%,#1e8acc 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #03c03c 0%,#1e8acc 40%,#1e8acc 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #03c03c 0%,#1e8acc 40%,#1e8acc 100%); /* IE10+ */
+background: linear-gradient(to right,  #03c03c 0%,#1e8acc 40%,#1e8acc 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03c03c', endColorstr='#1e8acc',GradientType=1 ); /* IE6-9 */
+
 }
 
 ul#iz{
@@ -55,7 +72,7 @@ li:hover div.barra{
 input#buscador{
 	width:185px;
 	height:50px;
-	background-color: #3c3c3c;
+	background-color: #03C03C;
 	outline: none;
 	border: 0px;
 	color: white;
@@ -75,16 +92,29 @@ input#buscador:focus{
 ::-webkit-input-placeholder{
 	color: #e2e2e2;
 	text-align: right;
-	opacity: .1;
+	opacity: .7;
 }
 
 li:hover p.menu{
 	opacity: 1;
 }
 
+.nav li a {
+	/*background-color:#1E8ACC;*/
+	color:#fff;
+	
+}
 
-
-
+div#mar{
+	width: 185px;
+}
+p#p{
+	margin-top: 15px;
+	font-size: 1.2em;	
+}
+#fot{
+	margin-top: 10px;
+}
 
 
 

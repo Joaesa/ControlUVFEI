@@ -1,7 +1,7 @@
 <nav id="top" class="navbar-fixed-top">
   <div class="container-fluid">
-    <div class="navbar-header">
-     <p class="menu">WebSiteName<p>
+    <div id="mar"class="navbar-header">
+     <p id="p">ControlUVFEI<p>
     </div>
     <div>
       <ul class="nav navbar-nav">

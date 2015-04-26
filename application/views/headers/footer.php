@@ -8,11 +8,10 @@
 	  <br></br>
 	  <br></br>
 
-	  <footer  class="footer navbar-fixed-bottom" style="text-align:center; color:white; background-color:black">
-	    <div class="container">
-	    	<br>
-	        <p  class="text-muted">© 2015 <a href="http://localhost/index.php">T-SHIRT & STAFF </a> All rights reserved.</p>
-	    </div><!-- #footer wrap -->
+	  <footer  class="footer navbar-fixed-bottom" style="text-align:center; color:white; background-color: #1e8acc">
+	    <div id="fot" class="container" >
+	        <p  class="text-muted" style="text-align:center; color:white;">© 2015 <a href="http://www.uv.mx">Universidad Veracruzana</a> All rights reserved.</p>
+	    </div>
 	</footer> 
 	</body>
 </html>
