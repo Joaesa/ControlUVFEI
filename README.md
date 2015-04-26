@@ -1,2 +1,0 @@
-# ControlUVFEI
-Proyecto Final
