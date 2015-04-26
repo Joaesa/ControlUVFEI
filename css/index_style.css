@@ -61,7 +61,7 @@ div.barra{
 	height: 50px;
 	width: 0px;
 	background-color: #aaa;
-	opacity: .1;
+	opacity: .7;
 	-webkit-transition: width .2s;
 }
 
@@ -115,7 +115,12 @@ p#p{
 #fot{
 	margin-top: 10px;
 }
-
+div#body{
+	margin-left: 200px;
+	margin-top: 50px;
+	background-color: white;
+}
+/*Contenedor*/
 
 
 
