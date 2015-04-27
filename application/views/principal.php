@@ -6,5 +6,5 @@
   	</div>
 	<div class="container">
 		<div id="con" style="text-align:center; margin-top: 50px;"><a href=""><img src="<?=base_url()?>imagen/EA.png"></a></div>
-		<div id="con" style="text-align:center; margin-top: 50px;"><a href=""><img src="<?=base_url()?>imagen/PD.png"></div>
+		<div id="con" style="text-align:center; margin-top: 50px;"><a href=""><img src="<?=base_url()?>imagen/PD.png"></a></div>
 	</div>

@@ -1,14 +1,12 @@
 <nav id="top" class="navbar-fixed-top">
   <div class="container-fluid">
     <div id="mar"class="navbar-header">
-     <p id="p">ControlUVFEI<p>
+
+     <p id="p"><img src="<?=base_url()?>imagen/UV.png" width="40px" height="40px"> &nbsp;&nbsp;&nbsp;ControlUVFEI <p>
     </div>
     <div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Page 1</a></li>
-        <li><a href="#">Page 2</a></li> 
-        <li><a href="#">Page 3</a></li> 
+        <li class="active"></li>
       </ul>
     </div>
   </div>
