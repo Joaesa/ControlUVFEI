@@ -8,6 +8,12 @@ class Welcome extends CI_Controller {
 		$this->load->view('principal');
 		$this->load->view('headers/footer');
 	}
+
+	public function curso(){
+		$this->load->view('headers/librerias');
+		$this->load->view('pagcurso');
+		$this->load->view('headers/footer');
+	}
 }
 
 /* End of file welcome.php */
