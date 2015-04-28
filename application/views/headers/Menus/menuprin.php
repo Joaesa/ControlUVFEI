@@ -13,16 +13,22 @@
 			</li>
 			</a>
 
+			<a href="">
 			<li id="zi">
 				<div class="barra"></div>
 				<img id="icon" src="<?=base_url()?>imagen/table.png" width="40px" height="40px">
 				<p class="menu">Bloques</p>
 			</li>
+			</a>
+
+			<a href="<?=base_url()?>index.php/Welcome/tmaterias">
 			<li id="zi">
 				<div class="barra"></div>
 				<img id="icon" src="<?=base_url()?>imagen/book-stack-128.png" width="40px" height="40px">
 				<p class="menu">Asignaturas</p>
 			</li>
+			</a>
+			
 			<li id="zi">
 				<div class="barra"></div>
 				<img id="icon" src="<?=base_url()?>imagen/add-user-128.png" width="40px" height="40px">
