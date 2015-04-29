@@ -69,7 +69,7 @@ background: -ms-linear-gradient(left,  #0e8c00 0%,#0021ff 100%); /* IE10+ */
 background: linear-gradient(to right,  #0e8c00 0%,#0021ff 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e8c00', endColorstr='#0021ff',GradientType=1 ); /* IE6-9 */
 
-	opacity: .7;
+	opacity: 1;
 	-webkit-transition: width .2s;
 }
 

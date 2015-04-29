@@ -19,19 +19,17 @@ class Welcome extends CI_Controller {
 		$this->load->view('TMaterias');
 		$this->load->view('headers/footer');
 	}
-<<<<<<< HEAD
+
 	public function tmaes(){
 		$this->load->view('headers/librerias');
 		$this->load->view('TMaestros');
 		$this->load->view('headers/footer');
-=======
-	function login(){
+	}
+	public function login(){
 		$this->load->helper(array('form'));
 		$this->load->view('login_view');
->>>>>>> origin/master
 	}
 }
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+
 ?>
