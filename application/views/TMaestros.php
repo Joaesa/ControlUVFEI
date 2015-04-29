@@ -1,11 +1,7 @@
-<head>
-  <title>Maestros</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-</head>
+<?php $this->load->view('headers/Menus/menuprin'); ?>
+<?php $this->load->view('headers/Menus/menumaes'); ?>
+<div id="body">
+<div class="container">
 <h1>Maestros</h1>
 <table class="table table-striped" style="text-align:center" >
          <thead>
@@ -73,5 +69,9 @@
       </div>
     </div>
   </div>
+  </div>
+  </div>
+  </div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

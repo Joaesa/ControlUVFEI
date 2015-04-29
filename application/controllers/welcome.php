@@ -19,6 +19,11 @@ class Welcome extends CI_Controller {
 		$this->load->view('TMaterias');
 		$this->load->view('headers/footer');
 	}
+	public function tmaes(){
+		$this->load->view('headers/librerias');
+		$this->load->view('TMaestros');
+		$this->load->view('headers/footer');
+	}
 }
 
 /* End of file welcome.php */

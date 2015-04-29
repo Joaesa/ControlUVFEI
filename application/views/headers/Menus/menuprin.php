@@ -21,18 +21,10 @@
 			</li>
 			</a>
 
-			<a href="<?=base_url()?>index.php/Welcome/tmaterias">
 			<li id="zi">
 				<div class="barra"></div>
-				<img id="icon" src="<?=base_url()?>imagen/book-stack-128.png" width="40px" height="40px">
-				<p class="menu">Asignaturas</p>
-			</li>
-			</a>
-			
-			<li id="zi">
-				<div class="barra"></div>
-				<img id="icon" src="<?=base_url()?>imagen/add-user-128.png" width="40px" height="40px">
-				<p class="menu">Maestros</p>
+				<img id="icon" src="<?=base_url()?>imagen/time-8-128.png" width="40px" height="40px">
+				<p class="menu">Horarios</p>
 			</li>
 
 			<a href="<?=base_url()?>index.php/Welcome/curso">
@@ -40,6 +32,22 @@
 				<div class="barra"></div>
 				<img id="icon" src="<?=base_url()?>imagen/school-128.png" width="40px" height="40px">
 				<p class="menu">Cursos</p>
+			</li>
+			</a>
+			
+			<a href="<?=base_url()?>index.php/Welcome/tmaes">
+			<li id="zi">
+				<div class="barra"></div>
+				<img id="icon" src="<?=base_url()?>imagen/add-user-128.png" width="40px" height="40px">
+				<p class="menu">Maestros</p>
+			</li>
+			</a>
+
+			<a href="<?=base_url()?>index.php/Welcome/tmaterias">
+			<li id="zi">
+				<div class="barra"></div>
+				<img id="icon" src="<?=base_url()?>imagen/book-stack-128.png" width="40px" height="40px">
+				<p class="menu">Asignaturas</p>
 			</li>
 			</a>
 
