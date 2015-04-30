@@ -8,11 +8,10 @@ class Welcome extends CI_Controller {
 
 	public function index()
  	{
-   	$this->load->helper(array('form'));
-   	$this->load->view('login_view');
+   		$this->load->view('headers/librerias');
+		$this->load->view('home_view');
+		$this->load->view('headers/footer');
  	}
- 
-
 	public function curso(){
 		$this->load->view('headers/librerias');
 		$this->load->view('pagcurso');
@@ -29,10 +28,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('TMaestros');
 		$this->load->view('headers/footer');
 	}
-	public function login(){
-		$this->load->helper(array('form'));
-		$this->load->view('login_view');
-	}
+	
 }
 
 

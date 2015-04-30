@@ -1,11 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
- <head>
-   <title>Inicio</title>
- </head>
- <body>
-   <h1>Inicio</h1>
-   <h2>Bienvenido <?php echo $username; ?>!</h2>
-   <a href="home/logout">Logout</a>
- </body>
-</html>
+<?php $this->load->view('headers/Menus/menuprin'); ?>
+<?php $this->load->view('headers/Menus/menupr'); ?>
+<div id="body">
+	<div class="jumbotron" style="text-align:center;">
+    	<h1>Bienvenido Al Control De Horarios</h1>      
+  	</div>
+	<div class="container">
+		<div id="con" style="text-align:center; margin-top: 50px;"><a href=""><img src="<?=base_url()?>imagen/EA.png"></a></div>
+		<div id="con" style="text-align:center; margin-top: 50px;"><a href=""><img src="<?=base_url()?>imagen/PD.png"></a></div>
+	</div>
