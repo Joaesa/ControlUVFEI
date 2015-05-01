@@ -9,6 +9,17 @@ class Welcome extends CI_Controller {
 	public function index()
  	{
    		$this->load->view('headers/librerias');
+		$this->load->view('Login');
+		$this->load->view('headers/footer');
+ 	}
+ 	public function LoginE(){
+ 		$this->load->view('headers/librerias');
+ 		
+		$this->load->view('Login');
+		$this->load->view('headers/footer');
+ 	}
+ 	public function home(){
+ 		$this->load->view('headers/librerias');
 		$this->load->view('home_view');
 		$this->load->view('headers/footer');
  	}

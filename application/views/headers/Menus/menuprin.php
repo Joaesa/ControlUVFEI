@@ -5,7 +5,7 @@
 				<input type="text" id="buscador" placeholder="search...">
 			</li>
 
-			<a href="<?=base_url()?>">
+			<a href="<?=base_url()?>index.php/Welcome/home">
 			<li id="zi">
 				<div class="barra"></div>
 				<img id="icon" src="<?=base_url()?>imagen/home-2-128.png" width="40px" height="40px">
@@ -51,9 +51,12 @@
 			</li>
 			</a>
 
+			<a href="<?=base_url()?>">
 			<li id="zi">
 				<div class="barra"></div>
 				<p class="menu">Salir</p>
 			</li>
+			</a>
+			
 		</ul>
 </nav>

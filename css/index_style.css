@@ -150,50 +150,11 @@ div#body{
 .style8 {font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
 .fondo-texto {font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*Login*/
+#login{
+	background-image: url(../imagen/login.png);
+	background-repeat: no-repeat;
+	background-position: 50% 15px;
+	height:85%;
+	text-align: center;
+}
