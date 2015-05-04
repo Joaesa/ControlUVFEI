@@ -14,7 +14,6 @@ class Welcome extends CI_Controller {
  	}
  	public function LoginE(){
  		$this->load->view('headers/librerias');
- 		
 		$this->load->view('Login');
 		$this->load->view('headers/footer');
  	}

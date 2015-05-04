@@ -6,7 +6,6 @@
 	<br></br>
 	<br></br>
 	<br></br>
-
 	<h1 class="form-signin-heading">Iniciar Sesion</h1>
 	<div class"form-group">
 		<label for="Usuario"> <h3>Usuario</h3> </label><br/>
