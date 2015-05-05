@@ -21,15 +21,8 @@
 </div>
 	<?php 
 		if (isset($_POST['Entrar'])){
-			$Usuario= $this->input->post('user');
+			$User= $this->input->post('user');
 			$Password= $this->input->post('pass');
-			$this->db->where('Usuario',$Usuario);
-			$this->db->where('Password',$Password);
-			$prueba= $this->db->get('usuarios');
-			if($prueba->num_rows() == 1){
-				redirect('welcome/home');
-			}else{
-				redirect('welcome/LoginE');
-			}
+			$this->principalmodel->login($User,$Password);
 		}
 	?>

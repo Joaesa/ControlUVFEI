@@ -78,7 +78,7 @@ class Welcome extends CI_Controller {
 }
 public function eliminarMaterias(){
 		$IDA = $this->uri-> segment(3);
-		$this->principalmodel->EliminarAIDA($IDA);
+		$this->principalmodel->EliminarA($IDA);
 
 		$this->load->view('headers/librerias');
 		$this->load->view('TMaterias');

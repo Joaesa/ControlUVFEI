@@ -1,4 +1,6 @@
-
+<?php $this->load->view('headers/Menus/menuprin'); ?>
+<?php $this->load->view('headers/Menus/menupr'); ?>
+<div id="body">
 	<div  class= "jumbotron"> 
 		<h1 style="font-size: 50pt">Actualizacion de Asignaturas</h1>
 	</div>

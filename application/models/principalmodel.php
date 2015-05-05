@@ -4,6 +4,23 @@ class principalmodel extends CI_Model {
 	function __construct() {
     	parent::__construct();
   	}
+  public function login($User,$Password){
+    $this->db->where('Usuario',$User);
+      $this->db->where('Password',$Password);
+      $prueba= $this->db->get('usuarios');
+      if($prueba->num_rows() == 1){
+        foreach ($prueba ->result() as $row){
+          if(strcmp($row->Usuario,$User)!== 0){
+            redirect('welcome/LoginE');
+          }else{
+            redirect('welcome/home');
+          }
+        }
+        
+      }else{
+        redirect('welcome/LoginE');
+      }
+  }
   public function obtenerDatosMa($IDM){
       $this->db->where('IDM',$IDM);
       $query = $this->db->get('Maestros');
