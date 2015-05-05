@@ -2,7 +2,7 @@
 <?php $this->load->view('headers/Menus/menumate'); ?>
 <div id="body">
 <div class="container">
-  <h1>Asignaturas  Solo Consultas no hay que agregar ni editar ni eliminar AEE</h1>
+  <h1>Asignaturas</h1>
   <table class="table table-striped" style="text-align:center" >
            <thead>
               <tr>

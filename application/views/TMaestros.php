@@ -3,7 +3,7 @@
 <div id="body">
 <div class="container">
 <h1>Maestros</h1>
-<?php echo "<a href='".base_url()."index.php/welcome/inserMaestro' class='btn btn-success btn-lg'><span class='glyphicon glyphicon-plus'></span> Agregar Maestro</a>";?>
+
 <table class="table table-striped" style="text-align:center" >
          <thead>
             <tr>
@@ -49,5 +49,4 @@
 </table>
 
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+

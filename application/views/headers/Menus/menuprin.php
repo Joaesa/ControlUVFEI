@@ -13,7 +13,7 @@
 			</li>
 			</a>
 
-			<a href="">
+			<a href="<?=base_url()?>index.php/Welcome/falta">
 			<li id="zi">
 				<div class="barra"></div>
 				<img id="icon" src="<?=base_url()?>imagen/table.png" width="40px" height="40px">
@@ -21,13 +21,15 @@
 			</li>
 			</a>
 
+			<a href="<?=base_url()?>index.php/Welcome/falta">
 			<li id="zi">
 				<div class="barra"></div>
 				<img id="icon" src="<?=base_url()?>imagen/time-8-128.png" width="40px" height="40px">
 				<p class="menu">Horarios</p>
 			</li>
-
-			<a href="<?=base_url()?>index.php/Welcome/curso">
+			</a>
+			
+			<a href="<?=base_url()?>index.php/Welcome/falta">
 			<li <?php if ($activa == 'curso'){ echo "class='active'"; } ?> id="zi">
 				<div class="barra"></div>
 				<img id="icon" src="<?=base_url()?>imagen/school-128.png" width="40px" height="40px">
@@ -51,12 +53,21 @@
 			</li>
 			</a>
 
+			<a href="<?=base_url()?>index.php/Welcome/falta">
+			<li id="zi">
+				<div class="barra"></div>
+				<img id="icon" src="<?=base_url()?>imagen/chair-4-128.png" width="40px" height="40px">
+				<p class="menu">Salon</p>
+			</li>
+			</a>
+
 			<a href="<?=base_url()?>">
 			<li id="zi">
 				<div class="barra"></div>
 				<p class="menu">Salir</p>
 			</li>
 			</a>
+			
 			
 		</ul>
 </nav>

@@ -9,7 +9,7 @@
         <li>
           <a href="<?=base_url()?>index.php/Welcome/agmaest">
             <span class="glyphicon glyphicon-plus"></span>&nbsp;
-            Inicio Administrador
+            Curso
           </a>
         </li>
       </ul>

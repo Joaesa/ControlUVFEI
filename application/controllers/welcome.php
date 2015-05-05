@@ -18,6 +18,11 @@ class Welcome extends CI_Controller {
 		$this->load->view('Login');
 		$this->load->view('headers/footer');
  	}
+ 	public function falta(){
+ 		$this->load->view('headers/librerias');
+		$this->load->view('falta');
+		$this->load->view('headers/footer');
+ 	}
  	public function home(){
  		$this->load->view('headers/librerias');
 		$this->load->view('home_view');
@@ -36,6 +41,11 @@ class Welcome extends CI_Controller {
 	public function agmate(){
 		$this->load->view('headers/librerias');
 		$this->load->view('insertarMaterias');
+		$this->load->view('headers/footer');
+	}
+	public function agmaest(){
+		$this->load->view('headers/librerias');
+		$this->load->view('insertarMaestro');
 		$this->load->view('headers/footer');
 	}
 	public function editarMaterias(){
@@ -80,13 +90,7 @@ public function eliminarMaterias(){
 		$this->load->view('TMaestros');
 		$this->load->view('headers/footer');
 	}
-	public function inserMaestro(){
-		$this->load->view('headers/librerias');
-		$this->load->view('insertarMaestro');
-		$this->load->view('headers/footer');
-	}
-
-
+	
 	public function editarMaestro(){
 		$IDM = $this->uri->segment(3);
 		$obtenerDatos= $this->principalmodel->obtenerDatosMa($IDM);
