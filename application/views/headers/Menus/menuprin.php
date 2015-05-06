@@ -29,7 +29,7 @@
 			</li>
 			</a>
 			
-			<a href="<?=base_url()?>index.php/Welcome/falta">
+			<a href="<?=base_url()?>index.php/Welcome/curso">
 			<li <?php if ($activa == 'curso'){ echo "class='active'"; } ?> id="zi">
 				<div class="barra"></div>
 				<img id="icon" src="<?=base_url()?>imagen/school-128.png" width="40px" height="40px">
@@ -61,7 +61,7 @@
 			</li>
 			</a>
 
-			<a href="<?=base_url()?>">
+			<a href="<?=base_url()?>index.php/Welcome/salir">
 			<li id="zi">
 				<div class="barra"></div>
 				<p class="menu">Salir</p>

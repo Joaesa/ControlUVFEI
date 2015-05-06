@@ -7,9 +7,9 @@
     <div>
       <ul class="nav navbar-nav">
         <li>
-          <a href="<?=base_url()?>index.php/Welcome/agmaest">
+          <a href="<?=base_url()?>index.php/Welcome/agcurso">
             <span class="glyphicon glyphicon-plus"></span>&nbsp;
-            Curso
+            Nuevo Curso
           </a>
         </li>
       </ul>
