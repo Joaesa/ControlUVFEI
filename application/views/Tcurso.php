@@ -5,7 +5,7 @@
 	
 <div class='container' style='background-color:'>
 	<h1>Cursos</h1>
-	<table class="table table-condensed">
+	<table class="table table-striped">
 		<thead >
 			<tr>
 				<th style="text-align:center">NCR</th>

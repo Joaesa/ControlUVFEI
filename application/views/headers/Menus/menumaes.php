@@ -12,6 +12,12 @@
             Nuevo Maestro
           </a>
         </li>
+        <li>
+          <a href="<?=base_url()?>index.php/Welcome/agasig">
+            <span class="glyphicon glyphicon-random"></span>&nbsp;
+            Asociar Asignatura
+          </a>
+        </li>
       </ul>
     </div>
   </div>

@@ -11,7 +11,15 @@
 			<div class="col-md-6">
 				
 				<form method="POST">
-					<table class="table table-hover" >
+						<?php 
+							$this->db->select('Asignatura');
+							$this->db->where('IDA',$IDA);
+							$Asig=$this->db->get('asignatura');
+							foreach ($Asig->result() as $key) {
+								$asi=$key->Asignatura;
+							}
+						?>
+					<table class="table table-condensed" >
 						<tr>
 							<td><label for="NCR">NCR :</label></td>
 							<td><label><?php echo $NRC;?></label></td>
@@ -30,8 +38,29 @@
 							</label>
 						</tr>
 						<tr>
+
 							<td><label for="IDM">IDM :</label></td>
-							<td><input type="text"  name="IDM" id="IDM" value="<?php echo $IDM;?>"/></td>
+							<td><select class="form-control" id="IDM" name="IDM">
+								<?php
+									$this->db->select('IDM');
+									$this->db->where('Asignatura',$asi);
+									$maes= $this->db->get('asignaturaasignada');
+									if($maes->num_rows() >0){
+										if($maes != FALSE){
+											foreach ($maes->result() as $key) {
+												$this->db->where('IDM',$key->IDM);
+												$query=$this->db->get('maestros');
+												if($query->num_rows() > 0){
+													if($query != FALSE){
+														foreach($query->result() as $rows){
+															echo "<option value='".$rows->IDM."'>".$rows->Nombre." ".$rows->ApellidoP." ".$rows->ApellidoM."</option>";
+														}
+													}
+												}
+											}
+										}
+									}?>
+							</select></td>
 						</tr>
 						<tr>
 							<td></br>

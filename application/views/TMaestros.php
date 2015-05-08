@@ -4,7 +4,11 @@
 <div class="container">
 <h1>Maestros</h1>
 
-<table class="table table-striped" style="text-align:center" >
+
+    <div class="row">
+        <div class="col-md-6">
+            <div id="iframes">
+        <table class="table table-striped" style="text-align:center" >
          <thead>
             <tr>
               <th style="text-align:center" >Numero:</th>
@@ -45,8 +49,53 @@
                     return FALSE;
                 }
             ?>
-</tbody>
-</table>
+            </tbody>
+            </table>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+                 <div id="iframes">
+       <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th style="text-align:center" >Identificacion</th>
+                                <th style="text-align:center" >Nombre</th>
+                                <th style="text-align:center" >Materias Asignadas</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $query= $this->db->get('maestros');
+                            if($query->num_rows() > 0){
+                                if($query != FALSE){
+                                    foreach ($query ->result() as $row){
+                                        echo "<tr>";
+                                        echo "<td>".$row->IDM."</td>";
+                                        echo "<td>".$row->Nombre." ".$row->ApellidoP." ".$row->ApellidoM."</td>";
+                                        echo "<td>";
+
+                                        $IDM= $row->IDM;
+                                        $this->db->where('IDM',$IDM);
+                                        $quer= $this->db->get('asignaturaasignada');
+                                        if($quer->num_rows() > 0){
+                                            if($quer != FALSE){
+                                                foreach($quer->result() as $rows){
+                                                    echo "".$rows->Asignatura." ";
+                                                }
+                                            }
+                                        }
+                                        echo "</td>";
+                                        echo "</tr>";
+                                    }
+                                }
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
 
 </div>
 

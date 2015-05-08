@@ -64,6 +64,7 @@
 			<a href="<?=base_url()?>index.php/Welcome/salir">
 			<li id="zi">
 				<div class="barra"></div>
+				<img id="icon" src="<?=base_url()?>imagen/close-icon-white.png" width="40px" height="40px">
 				<p class="menu">Salir</p>
 			</li>
 			</a>
