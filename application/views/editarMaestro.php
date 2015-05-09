@@ -2,13 +2,15 @@
 <?php $this->load->view('headers/Menus/menupr'); ?>
 <div id="body">
 	
-	<div  class= "jumbotron" > 
+	<div  class= "jumbotron"  style="text-align:center; background:orange; color: white;"  > 
 		<h1 style="font-size: 50pt">Actualizacion de Maestros</h1>
 	</div>
 	<div class="container">
-		
-		<form method="POST">
-			<table class="table table-hover" >
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6">
+			<form method="POST">
+			<table class="table table-striped" >
 				<tr>
 					<td><label for="Nombre">Nombre del Maestro :</label></td>
 					<td><input type="text"  name="Nombre" id="Nombre" value="<?php echo $Nombre;?>"/></td>
@@ -26,7 +28,12 @@
 						<input class="btn btn-success btn-lg" type="submit" name="Editar" id="Editar" value="Editar"/></td>
 				</tr>
 			</table>
-		</form>
+			</form>
+	</div>
+			<div class="col-sm-3"></div>
+		</div>
+		
+		
 	</div>
 	<?php 
 		if (isset($_POST['Editar'])){
@@ -42,4 +49,5 @@
 			$this->db->update('Maestros',$data);
 			redirect('welcome/tmaes');
 		}
+		$this->load->view('editarAA');
 	?>	

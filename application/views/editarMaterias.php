@@ -14,7 +14,51 @@
 				</tr>
 				<tr>
 					<td><label for="Carrera">Carrera:</label></td>
-					<td><input type="text"  name="Carrera" id="Carrera" value="<?php echo $Carrera;?>"/></td>
+					<td>
+						<select class="form-control" name="Carrera" id="Carrera">
+						<?php if($Carrera == 'Informatica'){
+							echo "<option value='Informatica'>Informatica</option>";
+							echo "<option value='Tecnologias Computacionales'>Tecnologia Computacionales</option>";
+							echo "<option value='Redes Y Servicios De Computo'>Redes Y Servicios De Computo</option>";
+							echo "<option value='Ingenieria De Software'>Ingenieria De Software</option>";
+							echo "<option value='Ciencias Y Tecnicas Estadisticas'>Ciencias Y Tecnicas Estadisticas</option>";
+							}
+						?>
+						<?php if($Carrera == 'Tecnologias Computacionales'){
+							echo "<option value='Tecnologias Computacionales'>Tecnologia Computacionales</option>";
+							echo "<option value='Redes Y Servicios De Computo'>Redes Y Servicios De Computo</option>";
+							echo "<option value='Ingenieria De Software'>Ingenieria De Software</option>";
+							echo "<option value='Ciencias Y Tecnicas Estadisticas'>Ciencias Y Tecnicas Estadisticas</option>";
+							echo "<option value='Informatica'>Informatica</option>";
+							}
+						?>
+						<?php if($Carrera == 'Redes Y Servicios De Computo'){
+							echo "<option value='Redes Y Servicios De Computo'>Redes Y Servicios De Computo</option>";
+							echo "<option value='Ingenieria De Software'>Ingenieria De Software</option>";
+							echo "<option value='Ciencias Y Tecnicas Estadisticas'>Ciencias Y Tecnicas Estadisticas</option>";
+							echo "<option value='Informatica'>Informatica</option>";
+							echo "<option value='Tecnologias Computacionales'>Tecnologia Computacionales</option>";
+							}
+						?>
+						<?php if($Carrera == 'Ingenieria De Software'){
+							
+							echo "<option value='Ingenieria De Software'>Ingenieria De Software</option>";
+							echo "<option value='Ciencias Y Tecnicas Estadisticas'>Ciencias Y Tecnicas Estadisticas</option>";
+							echo "<option value='Informatica'>Informatica</option>";
+							echo "<option value='Tecnologias Computacionales'>Tecnologia Computacionales</option>";
+							echo "<option value='Redes Y Servicios De Computo'>Redes Y Servicios De Computo</option>";
+							}
+						?>
+						<?php if($Carrera == 'Ciencias Y Tecnicas Estadisticas'){
+							
+							echo "<option value='Ciencias Y Tecnicas Estadisticas'>Ciencias Y Tecnicas Estadisticas</option>";
+							echo "<option value='Informatica'>Informatca</option>";
+							echo "<option value='Tecnologias Computacionales'>Tecnologia Computacionales</option>";
+							echo "<option value='Redes Y Servicios De Computo'>Redes Y Servicios De Computo</option>";
+							echo "<option value='Ingenieria De Software'>Ingenieria De Software</option>";
+							}
+						?>
+						</select></td>
 				</tr>
 				<tr>
 					<td><label for="Horas">Horas:</label></td>

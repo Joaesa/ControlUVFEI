@@ -7,39 +7,53 @@
 		<h1 style="font-size: 50pt">Agregar Asignaturas</h1>
 	</div>
 	<div class="container">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<form method="POST" >
+					<table class="table table-hover" >
+						<tr>
+							<td><label for="IDA">Num de asignatura:</label></td>
+							<td><input type="text"  name="IDA" id="IDA"/></td>
+						</tr>
+						<tr>
+							<td><label for="Asignatura">Nombre de la asignatura:</label></td>
+							<td><input type="text"  name="Asignatura" id="Asignatura"/></td>
+						</tr>
+						<tr>
+							<td><label for="Carrera">Carrera: </label></td>
+							<td><select class="form-control" name="Carrera" id="Carrera">
+								<?php 
+									echo "<option value='Informatica'>Informatica</option>";
+									echo "<option value='Tecnologias Computacionales'>Tecnologia Computacionales</option>";
+									echo "<option value='Redes Y Servicios De Computo'>Redes Y Servicios De Computo</option>";
+									echo "<option value='Ingenieria De Software'>Ingenieria De Software</option>";
+									echo "<option value='Ciencias Y Tecnicas Estadisticas'>Ciencias Y Tecnicas Estadisticas</option>";
+									
+								?></td>
+						</tr>
+						<tr>
+							<td><label for="Horas">Horas totales: </label></td>
+							<td><input type="text"  name="Horas" id="Horas" /></td>
+						</tr>
+						<tr>
+							<td><label for="Requerimientos">Requerimientos: </label></td>
+							<td><input type="text"  name="Requerimientos" id="Requerimientos" /></td>
+						</tr>
+						<tr>
+							<td><label for="Creditos">Creditos: </label></td>
+							<td><input type="text"  name="Creditos" id="Creditos" /></td>
+						</tr>
+						<tr>
+							<td></br>
+								<input class="btn btn-success btn-lg" type="submit" name="Insertar" id="Insertar" value="Insertar"/></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
 		
-		<form method="POST" >
-			<table class="table table-hover" >
-				<tr>
-					<td><label for="IDA">Num de asignatura:</label></td>
-					<td><input type="text"  name="IDA" id="IDA"/></td>
-				</tr>
-				<tr>
-					<td><label for="Asignatura">Nombre de la asignatura:</label></td>
-					<td><input type="text"  name="Asignatura" id="Asignatura"/></td>
-				</tr>
-				<tr>
-					<td><label for="Carrera">Carrera: </label></td>
-					<td><input type="text"  name="Carrera" id="Carrera" /></td>
-				</tr>
-				<tr>
-					<td><label for="Horas">Horas totales: </label></td>
-					<td><input type="text"  name="Horas" id="Horas" /></td>
-				</tr>
-				<tr>
-					<td><label for="Requerimientos">Requerimientos: </label></td>
-					<td><input type="text"  name="Requerimientos" id="Requerimientos" /></td>
-				</tr>
-				<tr>
-					<td><label for="Creditos">Creditos: </label></td>
-					<td><input type="text"  name="Creditos" id="Creditos" /></td>
-				</tr>
-				<tr>
-					<td></br>
-						<input class="btn btn-success btn-lg" type="submit" name="Insertar" id="Insertar" value="Insertar"/></td>
-				</tr>
-			</table>
-		</form>
 	</div>
 	<?php 
 		if (isset($_POST['Insertar'])){

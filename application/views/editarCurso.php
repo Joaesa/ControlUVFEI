@@ -97,7 +97,7 @@
 										if($quer->num_rows() > 0){
 											if($quer != FALSE){
 												foreach($quer->result() as $rows){
-													echo "".$rows->Asignatura." ";
+													echo "".$rows->Asignatura."</br> ";
 												}
 											}
 										}

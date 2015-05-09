@@ -1,19 +1,22 @@
 <?php $this->load->view('headers/Menus/menuprin'); ?>
 <?php $this->load->view('headers/Menus/menumate'); ?>
 <div id="body">
+  <div style="text-align:center; background:orange; color: white;">
+        <h1 style="font-size: 50pt">Asignatura</h1>
+    </div>
 <div class="container">
-  <h1>Asignaturas</h1>
+  
   <table class="table table-striped" style="text-align:center" >
            <thead>
               <tr>
-                  <th style="text-align:center" >IDMateria:</th>
-                  <th style="text-align:center" >Asignatura:</th>
-                  <th style="text-align:center" >Carrera:</th>
-                  <th style="text-align:center" >Horas</th>
-                  <th style="text-align:center" >Requerimientos</th>
-                  <th style="text-align:center" >Creditos</th>
-                  <th style="text-align:center" >Eliminar</th>
-                  <th style="text-align:center" >Editar</th>
+                  <th style="text-align:center" ><label>IDMateria</label></th>
+                  <th style="text-align:center" ><label>Asignatura</label></th>
+                  <th style="text-align:center" ><label>Carrera</label></th>
+                  <th style="text-align:center" ><label>Horas</label></th>
+                  <th style="text-align:center" ><label>Requerimientos</label></th>
+                  <th style="text-align:center" ><label>Creditos</label></th>
+                  <th style="text-align:center" ><label>Eliminar</label></th>
+                  <th style="text-align:center" ><label>Editar</label></th>
              </tr>
            </thead>
            <tbody>

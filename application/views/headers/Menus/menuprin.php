@@ -53,7 +53,7 @@
 			</li>
 			</a>
 
-			<a href="<?=base_url()?>index.php/Welcome/falta">
+			<a href="<?=base_url()?>index.php/Welcome/tsalon">
 			<li id="zi">
 				<div class="barra"></div>
 				<img id="icon" src="<?=base_url()?>imagen/chair-4-128.png" width="40px" height="40px">

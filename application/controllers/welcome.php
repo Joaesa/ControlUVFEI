@@ -163,6 +163,17 @@ class Welcome extends CI_Controller {
 		$this->load->view('headers/footer');
 
 }
+	public function editarAA(){
+		$IDM = $this->uri->segment(3);
+		$data=array(
+				'IDM'=>$IDM
+			);
+		$this->load->view('headers/librerias');
+		$this->load->view('editarAA',$data);
+		$this->load->view('headers/footer');
+
+
+	}
 	public function eliminarMaestro(){
 			$IDM = $this->uri-> segment(3);
 			$this->principalmodel->EliminarMa($IDM);
@@ -171,12 +182,27 @@ class Welcome extends CI_Controller {
 			$this->load->view('TMaestros');
 			$this->load->view('headers/footer');
 	}
+	public function eliminarAsig(){
+		$IDAsignatura = $this->uri-> segment(3);
+		$this->principalmodel->EliminarAA($IDAsignatura);
+		
+		$this->load->view('headers/librerias');
+		$this->load->view('TMaestros');
+		$this->load->view('headers/footer');
 
+	}
 	public function agasig(){
 			$this->load->view('headers/librerias');
 			$this->load->view('AsociarAM');
 			$this->load->view('headers/footer');
 	}
+
+	public function tsalon(){
+			$this->load->view('headers/librerias');
+			$this->load->view('TSalon');
+			$this->load->view('headers/footer');
+	}
+
 }
 
 

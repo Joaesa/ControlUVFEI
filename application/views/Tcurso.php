@@ -2,17 +2,20 @@
 <?php $this->load->view('headers/Menus/menucurso'); ?>
 
 <div id="body">
-	
+	<div style="text-align:center; background:orange; color: white;"  > 
+		<h1 style="font-size: 50pt">Cursos</h1>
+	</div>
 <div class='container' style='background-color:'>
-	<h1>Cursos</h1>
-	<table class="table table-striped">
+	<div id="iframes">
+	<table class="table table-striped" style="text-align:center">
 		<thead >
 			<tr>
-				<th style="text-align:center">NCR</th>
-				<th style="text-align:center">Asignatura</th>
-				<th style="text-align:center">Maestro</th>
-				<th style="text-align:center"></th>
-				<th style="text-align:center"></th>
+				<th style="text-align:center"><label>NCR</label></th>
+				<th style="text-align:center"><label>Asignatura</label></th>
+				<th style="text-align:center"><label>Carrera</label></th>
+				<th style="text-align:center"><label>Nombre Del Maestro Asignado</label></th>
+				<th style="text-align:center"><label>Editar</label></th>
+				<th style="text-align:center"><label>Eliminar</label></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -27,7 +30,8 @@
 							$querys= $this->db->get('asignatura');
 							if($querys->num_rows() == 1){
 								foreach ($querys ->result() as $rows){
-									echo "<td>".$rows->Asignatura."</td>";	
+									echo "<td>".$rows->Asignatura."</td>";
+									echo "<td>".$rows->Carrera."</td>";	
 								}
 							}
 							$this->db->where('IDM',$row->IDM);
@@ -49,4 +53,5 @@
 				?>				
 		</tbody>
 	</table>
+	</div>
 </div>

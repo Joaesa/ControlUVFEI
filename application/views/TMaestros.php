@@ -1,26 +1,23 @@
 <?php $this->load->view('headers/Menus/menuprin'); ?>
 <?php $this->load->view('headers/Menus/menumaes'); ?>
 <div id="body">
+    <div style="text-align:center; background:orange; color: white;">
+        <h1 style="font-size: 50pt">Maestros y Asignacion De Materias</h1>
+    </div>
 <div class="container">
-<h1>Maestros</h1>
-
-
-    <div class="row">
-        <div class="col-md-6">
-            <div id="iframes">
+    
+    <div id="iframes">
         <table class="table table-striped" style="text-align:center" >
-         <thead>
+        <thead>
             <tr>
-              <th style="text-align:center" >Numero:</th>
-                <th style="text-align:center" >Nombre:</th>
-                <th style="text-align:center" >Apellido Paterno:</th>
-                <th style="text-align:center" >Apellido Materno:</th>
-                <th style="text-align:center" >Editar</th>
-                 <th style="text-align:center" >Eliminar</th>
+                <th style="text-align:center" ><label> Numero</label></th>
+                <th style="text-align:center" ><label> Nombre Del Maestro</label></th>
+                <th style="text-align:center" ><label> Materias Asignadas </label></th>
+                <th style="text-align:center" ><label> Editar</label></th>
+                <th style="text-align:center" ><label> Eliminar</label></th>
            </tr>
          </thead>
          <tbody>
-          <tr>
            <?php 
                 $query = $this->db->get('Maestros');
                  if ($query->num_rows() > 0){
@@ -29,9 +26,19 @@
                              
                                 echo "<tr>";
                                 echo "<td>".$row->IDM."</td>"; 
-                                echo "<td>".$row->Nombre."</td>"; 
-                                echo "<td>".$row->ApellidoP."</td>";
-                                 echo "<td>".$row->ApellidoM."</td>";
+                                echo "<td>".$row->Nombre." ".$row->ApellidoP." ".$row->ApellidoM."</td>"; 
+                                echo "<td>";
+                                $IDM= $row->IDM;
+                                $this->db->where('IDM',$IDM);
+                                $quer= $this->db->get('asignaturaasignada');
+                                if($quer->num_rows() > 0){
+                                    if($quer != FALSE){
+                                        foreach($quer->result() as $rows){
+                                            echo "".$rows->Asignatura."</br>";
+                                        }
+                                    }
+                                }         
+                                echo "</td>";     
                                 echo "<td>";
                                     echo "<a href='".base_url()."index.php/welcome/editarMaestro/".$row->IDM."' class='label label-info'>";
                                     echo "<span class='glyphicon glyphicon-pencil'></a></span>";  
@@ -51,51 +58,6 @@
             ?>
             </tbody>
             </table>
-            </div>
-
+            <br></br>
         </div>
-        <div class="col-md-6">
-                 <div id="iframes">
-       <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th style="text-align:center" >Identificacion</th>
-                                <th style="text-align:center" >Nombre</th>
-                                <th style="text-align:center" >Materias Asignadas</th>
-                           </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            $query= $this->db->get('maestros');
-                            if($query->num_rows() > 0){
-                                if($query != FALSE){
-                                    foreach ($query ->result() as $row){
-                                        echo "<tr>";
-                                        echo "<td>".$row->IDM."</td>";
-                                        echo "<td>".$row->Nombre." ".$row->ApellidoP." ".$row->ApellidoM."</td>";
-                                        echo "<td>";
-
-                                        $IDM= $row->IDM;
-                                        $this->db->where('IDM',$IDM);
-                                        $quer= $this->db->get('asignaturaasignada');
-                                        if($quer->num_rows() > 0){
-                                            if($quer != FALSE){
-                                                foreach($quer->result() as $rows){
-                                                    echo "".$rows->Asignatura." ";
-                                                }
-                                            }
-                                        }
-                                        echo "</td>";
-                                        echo "</tr>";
-                                    }
-                                }
-                            }
-                            ?>
-                        </tbody>
-                    </table>
-            </div>
-        </div>
-    </div>
-
 </div>
-

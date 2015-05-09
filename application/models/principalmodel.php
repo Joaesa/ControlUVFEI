@@ -47,10 +47,19 @@ class principalmodel extends CI_Model {
    public function EliminarMa($IDM){
      $this->db->where('IDM',$IDM);
       $this->db->delete('Maestros');
+      $this->db->where('IDM',$IDM);
+      $this->db->delete('asignaturaasignada');
+      $data=array('IDM'=>'');
+      $this->db->where('IDM',$IDM);
+      $this->db->update('curso',$data);
   }
   public function EliminarCu($NRC){
      $this->db->where('NRC',$NRC);
       $this->db->delete('curso');
+  }
+  public function EliminarAA($IDAsignatura){
+     $this->db->where('IDAsignatura',$IDAsignatura);
+      $this->db->delete('asignaturaasignada');
   }
   public function obtenerDatosA($IDA){
       $this->db->where('IDA',$IDA);
@@ -65,5 +74,5 @@ class principalmodel extends CI_Model {
      $this->db->where('IDA',$IDA);
       $this->db->delete('Asignatura');
   }
-
+  
 }

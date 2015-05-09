@@ -23,7 +23,7 @@
 										if($querys->num_rows() > 0){
 											if($querys != FALSE){
 												foreach ($querys ->result() as $rows){
-													echo "<option value='".$rows->IDA."'>".$rows->Asignatura."</option>";	
+													echo "<option value='".$rows->IDA."'>".$rows->Asignatura." / ".$rows->Carrera."</option>";	
 												}
 											}
 										}
