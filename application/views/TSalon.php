@@ -5,16 +5,34 @@
         <h1 style="font-size: 50pt">Salones</h1>
 </div>
 <div class="container">
-  <table class="table table-striped" style="text-align:center" >   
-       <thead>
-          <tr>
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table table-striped" style="text-align:center" >   
+           <thead>
+              <tr>
+                <th>Salones</th>
+               
+              </tr>
+           </thead>
+           <tbody>
+              <tr>
+                <td> 
+                  <?php $query =$this->db->get('Salon');
+                      if($query->num_row() >0){
+                        if($query != FALSE){
+                          foreach ($query->result() as $row) {
+                            echo $row->salon;
+                          }
+                        }
+                      }
+                  ?>
+                </td>
+              </tr>
+           </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
 
-          </tr>
-       </thead>
-       <tbody>
-          <tr>
-
-          </tr>
-       </tbody>
-  </table>
+    </div>
+  </div>
 </div>
