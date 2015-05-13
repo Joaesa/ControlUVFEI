@@ -47,12 +47,11 @@
 							</select></td>
 						</tr>
 					</table>
-<<<<<<< HEAD
 				</form>
 			</div>
 	</div>
 </div>
-=======
+
 				</form>				
 			</div>
 	<div class="row">
@@ -75,4 +74,3 @@
 				</table>
 			</form>
 	</div>
->>>>>>> c5e8e3d9a79c3d4e6d8c02888f7a300f62a7f796
