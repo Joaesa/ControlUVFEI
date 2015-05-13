@@ -38,7 +38,7 @@
 									if ($query->$num_rows()>0){
 										if ($query!=FALSE){
 											foreach ($query->$result() as $rows) {
-												echo "<option value'"=.$rows->materia."'>";
+												echo "<option value'=".$rows->materia."'>";
 											}
 										}
 									}
