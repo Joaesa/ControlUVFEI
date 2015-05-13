@@ -1,8 +1,6 @@
 <?php $this->load->view('headers/Menus/menuprin'); ?>
-<<<<<<< HEAD
 <?php $this->load->view('headers/Menus/menuHorario'); ?>
-=======
-<?php $this->load->view('headers/Menus/menupr'); ?>
+<div id="body">
 
 <div class ="jumbotron" style="color:#FFFFFF; background-color:#6EE768; text-align:center">
 	<h1 style="font-size: 50pt"> Horario</h1>
@@ -29,7 +27,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-2"></div>
+			<div class="col-md-2"></div>
 			<div class="col-md-1">
 				<form method="POST">
 					<table class="table table-condensed" >
@@ -41,14 +39,16 @@
 									if ($query->$num_rows()>0){
 										if ($query!=FALSE){
 											foreach ($query->$result() as $rows) {
-												echo "<option value'"=.$rows->materia."'>";
+												echo "<option value='".$rows->materia."'>";
 											}
 										}
 									}
 
 								?>
+							</select></td>
 						</tr>
-	<?php 
-	if isset(echo id);
-	?>
->>>>>>> origin/master
+					</table>
+				</form>
+			</div>
+	</div>
+</div>
