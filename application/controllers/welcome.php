@@ -191,6 +191,11 @@ class Welcome extends CI_Controller {
 		$this->load->view('headers/footer');
 
 	}
+	public function agasal(){
+			$this->load->view('headers/librerias');
+			$this->load->view('TSalon');
+			$this->load->view('headers/footer');
+	}
 	public function agasig(){
 			$this->load->view('headers/librerias');
 			$this->load->view('AsociarAM');
@@ -200,6 +205,11 @@ class Welcome extends CI_Controller {
 	public function tsalon(){
 			$this->load->view('headers/librerias');
 			$this->load->view('TSalon');
+			$this->load->view('headers/footer');
+	}
+	public function thorario(){
+			$this->load->view('headers/librerias');
+			$this->load->view('horarios');
 			$this->load->view('headers/footer');
 	}
 
