@@ -43,12 +43,36 @@
 											}
 										}
 									}
-
 								?>
 							</select></td>
 						</tr>
 					</table>
+<<<<<<< HEAD
 				</form>
 			</div>
 	</div>
 </div>
+=======
+				</form>				
+			</div>
+	<div class="row">
+		<div class="col-md-2"></div>
+			<form method="POST">
+				<table class ="table table-condend">
+					<td><label form="horarios">7:00-8:00</label></td>
+					<td><label form="horarios">8:00-9:00</label></td>
+					<td><label form="horarios">9:00-10:00</label></td>
+					<td><label form="horarios">10:00-11:00</label></td>
+					<td><label form="horarios">11:00-12:00</label></td>
+					<td><label form="horarios">12:00-13:00</label></td>
+					<td><label form="horarios">13:00-14:00</label></td>
+					<td><label form="horarios">14:00-15:00</label></td>
+					<td><label form="horarios">15:00-16:00</label></td>
+					<td><label form="horarios">16:00-17:00</label></td>
+					<td><label form="horarios">17:00-18:00</label></td>
+					<td><label form="horarios">18:00-19:00</label></td>
+					<td><label form="horarios">19:00-20:00</label></td>
+				</table>
+			</form>
+	</div>
+>>>>>>> c5e8e3d9a79c3d4e6d8c02888f7a300f62a7f796
