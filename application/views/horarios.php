@@ -34,20 +34,7 @@
 						<tr>
 							<td><label form= "materia"> Materia </label></td>
 							<td><select class="form-control" id="materia" name="materia">
-								<?php
-									$query=$this->$this->$db->$get('materia');
-									if ($query->$num_rows()>0){
-										if ($query!=FALSE){
-											foreach ($query->$result() as $rows) {
-<<<<<<< HEAD
-												echo "<option value'=".$rows->materia."'>";
-=======
-												echo "<option value='".$rows->materia."'>";
->>>>>>> origin/master
-											}
-										}
-									}
-								?>
+								
 							</select></td>
 						</tr>
 					</table>
@@ -55,13 +42,13 @@
 			</div>
 	</div>
 </div>
-
-				</form>				
-			</div>
+		
 	<div class="row">
 		<div class="col-md-2"></div>
+		<div class="col-md-1">
 			<form method="POST">
 				<table class ="table table-condend">
+					<tr>
 					<td><label form="horarios">7:00-8:00</label></td>
 					<td><label form="horarios">8:00-9:00</label></td>
 					<td><label form="horarios">9:00-10:00</label></td>
@@ -75,6 +62,8 @@
 					<td><label form="horarios">17:00-18:00</label></td>
 					<td><label form="horarios">18:00-19:00</label></td>
 					<td><label form="horarios">19:00-20:00</label></td>
+				</tr>
 				</table>
 			</form>
 	</div>
+</div>
