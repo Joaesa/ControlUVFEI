@@ -22,15 +22,18 @@
 						</tr>
 						<tr>
 							<td><label for="Carrera">Carrera: </label></td>
-							<td><select class="form-control" name="Carrera" id="Carrera">
+							<td><select class="form-control" id="Carrera" name="Carrera">
 								<?php 
-									echo "<option value='Informatica'>Informatica</option>";
-									echo "<option value='Tecnologias Computacionales'>Tecnologia Computacionales</option>";
-									echo "<option value='Redes Y Servicios De Computo'>Redes Y Servicios De Computo</option>";
-									echo "<option value='Ingenieria De Software'>Ingenieria De Software</option>";
-									echo "<option value='Ciencias Y Tecnicas Estadisticas'>Ciencias Y Tecnicas Estadisticas</option>";
-									
-								?></td>
+									$mas=$this->db->get('carrera');
+									if($mas->num_rows() > 0){
+										if($mas != FALSE){
+											foreach($mas->result() as $ma){
+												echo "<option value='".$ma->Carrera."'>".$ma->Carrera."</option>";
+											}
+										}
+									}
+								?>
+							</select></td>
 						</tr>
 						<tr>
 							<td><label for="Horas">Horas totales: </label></td>

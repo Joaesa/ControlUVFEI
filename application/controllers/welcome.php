@@ -19,6 +19,14 @@ class Welcome extends CI_Controller {
 			$this->load->view('headers/footer');
 	    }
  	}
+ 	function PDF(){
+ 		$this->load->view('PDF');
+ 	}
+ 	function PDFS(){
+ 			$this->load->view('headers/librerias');
+			$this->load->view('PDFM');
+			$this->load->view('headers/footer');
+ 	}
  	public function salir(){
  		$this->db->where('Logeado','1');
  		$prueba= $this->db->get('usuarios');
@@ -35,7 +43,7 @@ class Welcome extends CI_Controller {
  	}
  	public function falta(){
  		$this->load->view('headers/librerias');
-		$this->load->view('horarios');
+		$this->load->view('falta');
 		$this->load->view('headers/footer');
  	}
  	public function home(){
@@ -182,6 +190,22 @@ class Welcome extends CI_Controller {
 			$this->load->view('TMaestros');
 			$this->load->view('headers/footer');
 	}
+	public function eliminarSal(){
+		$IDC = $this->uri-> segment(3);
+		$this->principalmodel->EliminarSal($IDC);
+		
+		$this->load->view('headers/librerias');
+		$this->load->view('carrera');
+		$this->load->view('headers/footer');
+	}
+	public function eliminarS(){
+		$IDS = $this->uri-> segment(3);
+		$this->principalmodel->EliminarS($IDS);
+		
+		$this->load->view('headers/librerias');
+		$this->load->view('TSalon');
+		$this->load->view('headers/footer');
+	}
 	public function eliminarAsig(){
 		$IDAsignatura = $this->uri-> segment(3);
 		$this->principalmodel->EliminarAA($IDAsignatura);
@@ -196,23 +220,123 @@ class Welcome extends CI_Controller {
 			$this->load->view('TSalon');
 			$this->load->view('headers/footer');
 	}
+	public function agasali(){
+			$this->load->view('headers/librerias');
+			$this->load->view('TSalon');
+			$this->load->view('headers/fallo');
+			$this->load->view('headers/footer');
+	}
 	public function agasig(){
 			$this->load->view('headers/librerias');
 			$this->load->view('AsociarAM');
 			$this->load->view('headers/footer');
 	}
 
-	public function tsalon(){
+	public function agSalon(){
 			$this->load->view('headers/librerias');
 			$this->load->view('TSalon');
 			$this->load->view('headers/footer');
 	}
 	public function thorario(){
-			$this->load->view('headers/librerias');
-			$this->load->view('horarios');
+			
+			$this->load->view('DDhorario');
 			$this->load->view('headers/footer');
 	}
+	public function agCarrera(){
+			$this->load->view('headers/librerias');
+			$this->load->view('carrera');
+			$this->load->view('headers/footer');
+	}
+	public function get_info_horario(){
+ 		$salon = $_POST['salon'];
+ 		$this->db->select('Dia,Hora,NCR');
+ 		$this->db->from('horario');
+ 		$this->db->where('IDS', $salon);
 
+ 		$this->db->order_by("IDHor", "desc"); 
+ 		$query = $this->db->get();
+ 		echo json_encode($query->result());
+ 	}
+
+ 	public function web_service(){
+		$salon = $_POST['salon'];
+		$dia   = $_POST['dia'];
+		$hora  = $_POST['hora'];
+		$nrc  = $_POST['nrc'];
+
+		switch ($dia) {
+			case 1:
+				$dia = 'Lunes';
+				break;
+			case 2:
+				$dia = 'Martes';
+				break;
+			case 3:
+				$dia = 'Miercoles';
+				break;
+			case 4:
+				$dia = 'Jueves';
+				break;
+			case 5:
+				$dia = 'Viernes';
+				break;
+			default:
+				$dia = 'Sabado';
+				break;
+		}
+
+		switch ($hora) {
+			case 1:
+				$hora = 7;
+				break;
+			case 2:
+				$hora = 9;
+				break;
+			case 3:
+				$hora = 11;
+				break;
+			case 4:
+				$hora = 13;
+				break;
+			case 5:
+				$hora = 15;
+				break;
+			case 6:
+				$hora = 17;
+				break;
+			default:
+				$hora = 19;
+				break;
+		}
+
+ 		$data = array(
+ 			'IDS' => $salon,
+ 			'Dia' => $dia,
+ 			'Hora' => $hora,
+ 			'NCR' => $nrc
+ 		);
+
+ 		$this->db->insert('horario', $data); 
+ 		echo 'EXITO!';
+ 	}
+
+public function BHorario(){
+		$salon = $_POST['salon'];
+		$dia   = $_POST['dia'];
+		$hora  = $_POST['hora'];
+		$nrc  = $_POST['nrc'];
+
+		
+ 		$data = array(
+ 			'IDS' => $salon,
+ 			'Dia' => $dia,
+ 			'Hora' => $hora,
+ 			'NCR' => $nrc
+ 		);
+ 		$this->db->where('NCR',$nrc);
+ 		$this->db->delete('horario'); 
+ 		echo 'EXITO!';
+ 	}
 }
 
 

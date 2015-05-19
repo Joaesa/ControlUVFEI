@@ -33,7 +33,7 @@
 									if($asig->num_rows() > 0){
 										if($asig != FALSE){
 											foreach($asig->result() as $asi){
-												echo "<option value='".$asi->Asignatura."'>".$asi->Asignatura."</option>";
+												echo "<option value='".$asi->Asignatura."'>".$asi->Asignatura." ( ".$asi->Carrera." )</option>";
 											}
 										}
 									}

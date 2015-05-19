@@ -13,13 +13,13 @@
 			</li>
 			</a>
 
-			<a href="<?=base_url()?>index.php/Welcome/falta">
+			<!--<a href="<?=base_url()?>index.php/Welcome/falta">
 			<li id="zi">
 				<div class="barra"></div>
 				<img id="icon" src="<?=base_url()?>imagen/table.png" width="40px" height="40px">
 				<p class="menu">Bloques</p>
 			</li>
-			</a>
+			</a>-->
 
 			<a href="<?=base_url()?>index.php/Welcome/thorario">
 			<li id="zi">
@@ -50,14 +50,6 @@
 				<div class="barra"></div>
 				<img id="icon" src="<?=base_url()?>imagen/book-stack-128.png" width="40px" height="40px">
 				<p class="menu">Asignaturas</p>
-			</li>
-			</a>
-
-			<a href="<?=base_url()?>index.php/Welcome/tsalon">
-			<li id="zi">
-				<div class="barra"></div>
-				<img id="icon" src="<?=base_url()?>imagen/chair-4-128.png" width="40px" height="40px">
-				<p class="menu">Salon</p>
 			</li>
 			</a>
 

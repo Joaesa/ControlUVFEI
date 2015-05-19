@@ -7,7 +7,15 @@
     <div>
       <ul class="nav navbar-nav">
         <li>
-          <a href="<?=base_url()?>index.php/Welcome/agcurso">
+          <a href="<?=base_url()?>index.php/Welcome/agSalon">
+            <span class="glyphicon glyphicon-plus"></span>&nbsp;
+            PDF
+          </a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="<?=base_url()?>index.php/Welcome/agSalon">
             <span class="glyphicon glyphicon-plus"></span>&nbsp;
             Salon
           </a>

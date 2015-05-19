@@ -18,6 +18,12 @@
             Asociar Asignatura
           </a>
         </li>
+         <li>
+          <a href="<?=base_url()?>index.php/Welcome/PDFS">
+            <span class="glyphicon glyphicon-file"></span>&nbsp;
+            PDF
+          </a>
+        </li>
       </ul>
     </div>
   </div>

@@ -57,6 +57,40 @@ class principalmodel extends CI_Model {
      $this->db->where('NRC',$NRC);
       $this->db->delete('curso');
   }
+  public function EliminarS($IDS){
+     $this->db->where('IDS',$IDS);
+      $this->db->delete('Salon');
+  }
+  public function EliminarSal($IDC){
+      $this->db->where('IDC',$IDC);
+      $this->db->select('Carrera');
+      $Car=$this->db->get('carrera');
+      foreach($Car->result() as $Ca){
+
+        $Asig= $this->db->get('Asignatura');
+        if($Asig->num_rows() > 0){
+          if($Asig != FALSE){
+            foreach($Asig->result() as $asi){
+              if($asi->Carrera == $Ca->Carrera){
+                $curso= $this->db->get('curso');
+                if($curso != FALSE){
+                  foreach ($curso->result() as $cur) {
+                    if($asi->IDA == $cur->IDA){
+                      $this->db->where('IDA',$cur->IDA);
+                      $this->db->delete('curso');
+                    }
+                  }
+                }
+                $this->db->where('IDA',$asi->IDA);
+                $this->db->delete('Asignatura');
+              }
+            }
+          }
+        }
+      }
+      $this->db->where('IDC',$IDC);
+      $this->db->delete('Carrera');
+  }
   public function EliminarAA($IDAsignatura){
      $this->db->where('IDAsignatura',$IDAsignatura);
       $this->db->delete('asignaturaasignada');
