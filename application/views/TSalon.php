@@ -7,6 +7,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
+      <div id="iframes">
       <table class="table table-striped" style="text-align:center" >   
            <thead>
               <tr>
@@ -35,6 +36,7 @@
                 
            </tbody>
       </table>
+      </div>
     </div>
     <div class="col-md-6">
       <form method="POST">

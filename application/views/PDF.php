@@ -10,12 +10,12 @@ $pdf->AliasNbPAges();
 $pdf->AddPage();
 
 //Datos de Titulo
-$pdf->SetTextColor(0x00, 0x00,0x00);
-$pdf->SetFont("Arial","b",9);
-$pdf->Cell(0,5,'Reporte de maestros',0,1,'C');
+//$pdf->SetTextColor(0x00, 0x00,0x00);
+//$pdf->SetFont("Arial","b",9);
+//$pdf->Cell(0,5,'Reporte de maestros',0,1,'C');
 
 //Datos de coneccion
-$pdf->Ln();
+//$pdf->Ln();
 //Datos a Mostrar
 
 

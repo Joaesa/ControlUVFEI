@@ -9,10 +9,7 @@
   <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/index_style.css">
 
   <style>
-#div1
-{float:left; width:110px; height:500px; margin:10px;padding:10px;border:1px solid #aaaaaa;}
-.segmento-horario
-{float:left; width:100%; min-height:50px; height: 100%; margin:10px;padding:10px;border:1px solid #aaaaaa;background-color: #C2ACE8;}
+
 </style>
 
 <script>
@@ -149,8 +146,22 @@ function drop(ev) {
     ?>
   </ul>
 </div>
+
 <div class="row">
-<div  class="col-sm-2" style="background-color: #C2ACCA;" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <div class="col-md-2"></div>
+  <div class="col-md-10">
+    <div class="row">
+      <div class="col-md-2"><label>Lunes</label></div>
+      <div class="col-md-2"><label>Martes</label></div>
+      <div class="col-md-2"><label>Miercoles</label></div>
+      <div class="col-md-2"><label>Jueves</label></div>
+      <div class="col-md-2"><label>Viernes</label></div>
+      <div class="col-md-2"><label>Sabado</label></div>
+    </div>
+  </div>
+</div>
+<div class="row">
+<div id="curso" class="col-sm-2"  id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
   <?php 
     $query =$this->db->get('asignatura');
       foreach ($query ->result() as $key => $row) {
@@ -158,7 +169,30 @@ function drop(ev) {
       } 
   ?>
 </div>
-<div class="col-sm-10">
+<div class="col-sm-1">
+  <div class="row">
+    <div id="Hor" class="col-sm-2">7-9</div>
+  </div>
+  <div class="row">
+    <div id="Hor" class="col-sm-2">9-11</div>
+  </div>
+  <div class="row">
+    <div id="Hor" class="col-sm-2">11-13</div>
+  </div>
+  <div class="row">
+    <div id="Hor" class="col-sm-2">13-15</div>
+  </div>
+  <div class="row">
+    <div id="Hor" class="col-sm-2">15-17</div>
+  </div>
+  <div class="row">
+    <div id="Hor" class="col-sm-2">17-19</div>
+  </div>
+  <div class="row">
+    <div id="Hor" class="col-sm-2">19-21</div>
+  </div>
+</div>
+<div class="col-sm-9">
 <?php
   for( $i = 1; $i <= 7; $i++ ){
     echo '<div class="row">';
@@ -171,3 +205,6 @@ function drop(ev) {
   }
 ?>
 </div>
+</div>
+<br></br>
+<br></br>
