@@ -129,6 +129,26 @@ class Welcome extends CI_Controller {
 		$this->load->view('editarCurso',$data);
 		$this->load->view('headers/footer');
 	}
+	public function editarBloque(){
+		$IDBloque= $this->uri->segment(3);
+		$obtenerDatos=$this->principalmodel->obtenerDatosBlo($IDBloque);
+		if($obtenerDatos!= FALSE){
+			foreach ($obtenerDatos->result() as $key) {
+				$Bloque=$key->Bloque;
+				$Seccion=$key->Seccion;				
+			}
+			$data = array(
+				'IDBloque'=>$IDBloque,
+				'Bloque'=>$Bloque,
+				'Seccion'=>$Seccion
+				);
+		}else{
+			return FALSE;
+		}
+		$this->load->view('headers/librerias');
+		$this->load->view('editarBloque',$data);
+		$this->load->view('headers/footer');
+	}
 	public function eliminarMaterias(){
 			$IDA = $this->uri-> segment(3);
 			$this->principalmodel->EliminarA($IDA);
@@ -136,6 +156,14 @@ class Welcome extends CI_Controller {
 			$this->load->view('headers/librerias');
 			$this->load->view('TMaterias');
 			$this->load->view('headers/footer');
+	}
+	public function eliminarBloque(){
+		$IDBloque = $this->uri->segment(3);
+		$this->principalmodel->EliminarBlo($IDBloque);
+
+		$this->load->view('headers/librerias');
+		$this->load->view('bloque');
+		$this->load->view('headers/footer');
 	}
 
 	public function eliminarCurso(){

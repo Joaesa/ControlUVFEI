@@ -40,8 +40,8 @@
                 }
               }
               }
-              echo "<td><a href='".base_url()."index.php/welcome/editarCurso/".$row->NRC."' class='label label-info'><span class='glyphicon glyphicon-pencil'></a></span></td>";
-              echo "<td><a href='".base_url()."index.php/welcome/eliminarCurso/".$row->NRC."' class='label label-danger'><span class='glyphicon glyphicon-remove'></a></span></td>";
+              echo "<td><a href='".base_url()."index.php/welcome/editarBloque/".$row->IDBloque."' class='label label-info'><span class='glyphicon glyphicon-pencil'></a></span></td>";
+              echo "<td><a href='".base_url()."index.php/welcome/eliminarBloque/".$row->IDBloque."' class='label label-danger'><span class='glyphicon glyphicon-remove'></a></span></td>";
               echo "</tr>";
             }
           }

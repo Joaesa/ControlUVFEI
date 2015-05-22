@@ -44,6 +44,15 @@ class principalmodel extends CI_Model {
         return FALSE;
       }
   }
+  public function obtenerDatosBlo($IDBloque){
+    $this->db->where('IDBloque',$IDBloque);
+    $query =$this->db->get('bloques');
+    if($query->num_rows()> 0){
+      return $query;
+    }else{
+        return FALSE;
+      }    
+  }
    public function EliminarMa($IDM){
      $this->db->where('IDM',$IDM);
       $this->db->delete('Maestros');
@@ -52,6 +61,10 @@ class principalmodel extends CI_Model {
       $data=array('IDM'=>'');
       $this->db->where('IDM',$IDM);
       $this->db->update('curso',$data);
+  }
+  public function EliminarBlo($IDBloque){
+    $this->db->where('IDBloque',$IDBloque);
+    $this->db->delete('bloques');    
   }
   public function EliminarCu($NRC){
      $this->db->where('NRC',$NRC);
