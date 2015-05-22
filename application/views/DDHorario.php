@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 function repaint_hor(){
   $.post('http://localhost/ControlUVFEI/index.php/welcome/get_info_horario', {"salon":id_salon}, function(result){
-    var json = $.parseJSON(result);
+    var json = $.parseJSON(result);//analiza una cadena que contiene JSON.
     for (var i = json.length - 1; i >= 0; i--) {
       var hora = json[i].Hora;
       var dia = json[i].Dia;

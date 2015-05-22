@@ -71,6 +71,11 @@ class Welcome extends CI_Controller {
 		$this->load->view('insertarCurso');
 		$this->load->view('headers/footer');
 	}
+	public function agbloque(){
+		$this->load->view('headers/librerias');
+		$this->load->view('insertarBloque');
+		$this->load->view('headers/footer');
+	}
 	public function agmaest(){
 		$this->load->view('headers/librerias');
 		$this->load->view('insertarMaestro');
@@ -337,6 +342,11 @@ public function BHorario(){
  		$this->db->delete('horario'); 
  		echo 'EXITO!';
  	}
+ public function Tbloque(){
+ 	$this->load->view('headers/librerias');
+	$this->load->view('bloque');
+	$this->load->view('headers/footer');
+ }
 }
 
 
