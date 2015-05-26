@@ -19,6 +19,7 @@
     <tbody>
         <?php 
         $query= $this->db->get('bloques');
+
         if($query->num_rows() > 0){
           if($query != FALSE){
             foreach ($query ->result() as $row){

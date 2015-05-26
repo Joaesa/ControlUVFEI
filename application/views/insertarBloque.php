@@ -44,6 +44,8 @@
 	</div>
 	<?php 
 		if (isset($_POST['Insertar'])){
+				$min_bloque=3;
+				$max_bloque=6;
 			    $IDBloque= $this->input->post('IDBloque');
 			    $Bloque= $this->input->post('Bloque');
 			    $Seccion= $this->input->post('Seccion');
@@ -51,9 +53,21 @@
 			    $NRC=$this->input->post('NRC');
 				$data=array(
 					'IDBloque'=>$IDBloque,
-					'Bloque'=>$Bloque,
-					'Seccion'=>$Seccion,
-					'Carrera'=>$Carrera,
+					if(('Bloque' > = $min_bloque) && ('Bloque'< = $max_bloque)){
+						'Bloque'=>$Bloque,
+					}else{
+						alert('Error AJAX');
+					}
+					if ('Seccion'.$id != "Seccion".$id;) {
+						'Seccion'=>$Seccion,	
+					}else{
+						alert('Error AJAX');
+					}					
+					if ('Carrera'=> $IDBloque=$this->$db->$bloques('Carrera')) {
+						'Carrera'=>$Carrera,
+					}else{
+						alert('Error AJAX');
+					}				
 					'NRC'=>$NRC,
 					);
 			$this->db->where('IDBloque',$IDBloque);
