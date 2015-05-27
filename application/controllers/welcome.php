@@ -43,7 +43,7 @@ class Welcome extends CI_Controller {
  	}
  	public function falta(){
  		$this->load->view('headers/librerias');
-		$this->load->view('falta');
+		$this->load->view('bloque');
 		$this->load->view('headers/footer');
  	}
  	public function home(){
