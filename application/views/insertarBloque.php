@@ -24,8 +24,17 @@
 								<td><input type="text" name="Seccion" id="Seccion"></td>
 							</tr>
 							<tr>
-								<td><label for="Carrera">Carrera</label></td>
-								<td><input type="text" name="Seccion" id="Seccion"></td>
+								<?php 
+        							$query = $this->db->get('bloques');        						
+        							if ($query->num_rows() > 0) {
+        								foreach ($query  as $result) {        								        								
+        									$bloques = "<option value='".$result['Carrera'].">"."</option>";
+        								}
+        							}
+        						?>
+								<td><select name="Carrera"></td>
+								<?php echo $bloques; ?>
+								</select>
 							</tr>
 							<tr>
 								<td><label for="NRC">NRC</label></td>
@@ -52,31 +61,20 @@
 			    $Carrera=$this->input->post('Carrera');
 			    $NRC=$this->input->post('NRC');
 				$data=array(
-					'IDBloque'=>$IDBloque,
-					if(('Bloque' > = $min_bloque) && ('Bloque'< = $max_bloque)){
-						'Bloque'=>$Bloque,
-					}else{
-						alert('Error AJAX');
-					}
-					if ('Seccion'.$id != "Seccion".$id;) {
-						'Seccion'=>$Seccion,	
-					}else{
-						alert('Error AJAX');
-					}					
-					if ('Carrera'=> $IDBloque=$this->$db->$bloques('Carrera')) {
-						'Carrera'=>$Carrera,
-					}else{
-						alert('Error AJAX');
-					}				
+					'IDBloque'=>$IDBloque,					
+						'Bloque'=>$Bloque,					
+						'Seccion'=>$Seccion,
+						'Carrera'=>$Carrera,					
 					'NRC'=>$NRC,
-					);
+					);				
 			$this->db->where('IDBloque',$IDBloque);
 			$prueba= $this->db->get('bloques');
+
 			if($prueba->num_rows() > 0){
 				redirect('welcome/agbloque');
 			}else{
-				$this->db->insert('curso',$data);
-				redirect('welcome/Tbloque');
+				$this->db->insert('bloques',$data);
+				redirect('welcome/Tbloque');							
 			}
 		}
 	?>

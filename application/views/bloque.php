@@ -35,8 +35,8 @@
                 }
                 $this->db->where('NRC',$row->NRC);
                 $queryn= $this->db->get('curso');
-                if($queryn->num_rows() == 1){
-                foreach ($queryn ->result() as $rown){
+                if($queryn->num_rows() > 0){
+                foreach ($queryn  as $rown){
                   echo "<td>".$rown->NRC."</td>";  
                 }
               }
@@ -55,38 +55,61 @@
           <table class="table table-hover">
             <thead>
                     <tr>
-                        <th style="text-align:center" >Identificacion</th>
-                        <th style="text-align:center" >Nombre</th>
-                        <th style="text-align:center" >Materias Asignadas</th>
+                        <th style="text-align:center" >Bloque</th>
+                        <th style="text-align:center" >NRC</th>
+                        <th style="text-align:center" >Asignatura</th>
+                        <th style="text-align:center" >Horario</th>
                    </tr>
                 </thead>
                 <tbody>
               <?php
-              $query= $this->db->get('maestros');
+              $query= $this->db->get('bloques');
               if($query->num_rows() > 0){
                 if($query != FALSE){
                   foreach ($query ->result() as $row){
                     echo "<tr>";
-                    echo "<td>".$row->IDM."</td>";
-                    echo "<td>".$row->Nombre." ".$row->ApellidoP." ".$row->ApellidoM."</td>";
+                    echo "<td>".$row->Bloque."</td>";
+                    echo "<td>".$row->NRC."</td>";
                     echo "<td>";
 
-                    $IDM= $row->IDM;
-                    $this->db->where('IDM',$IDM);
-                    $quer= $this->db->get('asignaturaasignada');
+                    $NRC= $row->NRC;
+                    $this->db->where('NRC',$NRC);
+                    $quer= $this->db->get('curso');
                     if($quer->num_rows() > 0){
                       if($quer != FALSE){
                         foreach($quer->result() as $rows){
-                          echo "".$rows->Asignatura."</br> ";
+                          echo "".$rows->IDA."</br> ";
+
+                          $IDA = $row1->IDA;
+                          $this->db->where('IDA',$IDA);
+                          $quera = $this->db->get('asignatura');
+                          if($quera->num_rows() > 0){
+                            if($quera != FALSE){
+                              foreach ($quera->result() as $rowss) {
+                                echo"".$rowss->Asignatura."</br>";
+
+                                $IDAS = $row2->IDA;
+                                $this->db->where('NCR',$IDAS);
+                                $query2 = $this->db->get('horario');
+                                if ($query2->num_rows()> 0) {
+                                  if($query2 != FALSE){
+                                    foreach ($query2->result() as $row3) {
+                                      echo"".$row3->Dia."</br>";
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
-                    echo "</td>";
-                    echo "</tr>";
-                  }
+                  }                    
                 }
-              }
-              ?>
+                echo "</td>";
+                echo "</tr>";
+              }                                
+            ?>
             </tbody>
           </table>
         </div>
